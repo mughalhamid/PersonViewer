@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { GenderDistributionChartComponent } from './gender-distribution-chart/gender-distribution-chart.component';
+import { WeatherHomeComponent } from './weather-home/weather-home.component';
+import { WeatherDetailComponent } from './weather-detail/WeatherDetailComponent';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { GenderDistributionChartComponent } from './gender-distribution-chart/ge
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    GenderDistributionChartComponent
+    GenderDistributionChartComponent,
+    WeatherHomeComponent,
+    WeatherDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,6 +32,8 @@ import { GenderDistributionChartComponent } from './gender-distribution-chart/ge
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'weather-home', component: WeatherHomeComponent },
+      { path: 'weather-detail/:id', component: WeatherDetailComponent },
     ])
   ],
   providers: [],
